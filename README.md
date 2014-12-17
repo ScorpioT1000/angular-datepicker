@@ -64,9 +64,9 @@ Global options and translations:
 
 ```JavaScript
 mainApp.factory('myGlobal', function($rootScope) {
-  var self = this;
+  var me = this;
   
-  self.angularDatepickerOptions = {
+  me.angularDatepickerOptions = {
     format: 'yyyymmdd',
     formatSubmit: 'yyyymmdd',
     monthsFull: 'Январь,Февраль,Март,Апрель,Май,Июнь,Июль,Август,Сентябрь,Октябрь,Ноябрь,Декабрь'.split(','),
@@ -80,11 +80,18 @@ mainApp.factory('myGlobal', function($rootScope) {
     clear: 'Сбросить'
   };
   
-  self.init = function(){
+  me.construct = function(){
     $rootScope.dpo = self.angularDatepickerOptions;
   };
   
-  return self;
+  me.construct();
+  return me;
+});
+
+// the you should access this factory in your root controller, 
+// for ex 
+mainApp.controller('main', function(myGlobal) { 
+  // ...
 });
 ```
 
