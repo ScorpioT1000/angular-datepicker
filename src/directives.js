@@ -71,7 +71,7 @@ angular.module('angular-datepicker', [])
                     onOpen: onOpen,
                     onSet: onSet,
                     onClose: onClose,
-                    container: document.body            
+                    /*container: document.body            */
                 }));
 
                 setTimeout(function() {
@@ -144,7 +144,7 @@ angular.module('angular-datepicker', [])
                 element.pickatime(angular.extend(options, {                
                     onSet: onSet,
                     onClose: onClose,
-                    container: document.body            
+                    /*container: document.body            */
                 }));
 
                 setTimeout(function() {
