@@ -88,7 +88,7 @@ mainApp.factory('myGlobal', function($rootScope) {
   return me;
 });
 
-// the you should access this factory in your root controller, 
+// then you should access this factory in your root controller, 
 // for ex 
 mainApp.controller('main', function(myGlobal) { 
   // ...
